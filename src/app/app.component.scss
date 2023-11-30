@@ -1,0 +1,28 @@
+.main {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  &__container {
+    padding: 25px 20px;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid;
+  }
+  &__title {
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-size: 40px;
+    text-align: center;
+  }
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 250px));
+    justify-content: space-between;
+    gap: 40px;
+  }
+}

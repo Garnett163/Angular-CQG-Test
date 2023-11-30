@@ -1,0 +1,25 @@
+<li class="package-item">
+  <h3 class="package-item__title" [ngClass]="{ 'my-class': package.isHovered }">
+    <span *ngIf="package.id.includes('/')" class="package-item__first-part"
+      >{{ package.id.split("/")[0] }}/</span
+    >
+    <span *ngIf="package.id.includes('/')">
+      {{ package.id.split("/")[1] }}</span
+    >
+    <span *ngIf="!package.id.includes('/')">
+      {{ package.id }}
+    </span>
+  </h3>
+  <div class="package-item__flex-box">
+    <span class="package-item__number-download">{{
+      package.weeklyDownloads | weeklyDownloads
+    }}</span>
+    <img
+      class="package-item__image-download"
+      src="../../../assets/images/free-icon-download-arrow-81500.png"
+    />
+  </div>
+  <span class="package-item__number-dependecies"
+    >{{ package.dependencyCount }} dependecies</span
+  >
+</li>

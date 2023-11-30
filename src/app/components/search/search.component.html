@@ -1,0 +1,13 @@
+<form name="search" class="search" (ngSubmit)="search($event)">
+  <input
+    type="text"
+    placeholder="Search"
+    class="search__input"
+    [(ngModel)]="searchQuery"
+    name="searchQuery"
+  />
+  <button type="submit" class="search__button">Search</button>
+  <button type="button" class="search__button" (click)="resetSearch()">
+    Reset
+  </button>
+</form>
